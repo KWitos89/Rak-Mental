@@ -190,10 +190,11 @@ img {
     transform: translate(7px, -5px);
   }
 }
+
 .container__img {
   grid-column: 2/2;
   grid-row: 7/11;
-  background-image: url(/img/raku.png);
+  background-image: url(https://github.com/KWitos89/Rak-Mental/blob/main/img/raku.png);
   background-repeat: no-repeat;
   background-position: 41% 40%;
   filter: grayscale(100%) drop-shadow(20px 20px 5px rgba(0, 0, 0, 0.5));
