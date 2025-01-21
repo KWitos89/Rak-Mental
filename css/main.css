@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bodoni Moda", serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: 20px 1fr 20px;
+  height: 100vh;
+  background-color: #191919;
+  padding-top: 10px;
+  color: #ead79c;
+  overflow: hidden;
+}
+.hero header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  position: relative;
+  width: 100%;
+  grid-column: 2/2;
+}
+.hero header .logo {
+  justify-self: left;
+  width: 150px;
+}
+.hero header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.hero header .menu .mobile__menu {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  position: absolute;
+  padding: 24px;
+  top: -15px;
+  right: -15px;
+  height: 90vh;
+  width: 50vw;
+  font-size: 18px;
+  transform: translateX(150%);
+  transition: transform 0.8s ease;
+  z-index: 3;
+  background-color: #191919;
+  border: 1px solid #ead79c;
+}
+.hero header .menu .mobile__menu::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 110%;
+  height: 100%;
+  border: 1px solid #ead79c;
+}
+.hero header .menu .mobile__menu.active {
+  transform: translateX(0%);
+}
+.hero header .menu .mobile__menu .menu__mobile--list {
+  list-style: none;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: repeat(10, 1fr);
+  row-gap: 10px;
+  height: 100%;
+}
+.hero header .menu .mobile__menu .menu__mobile--list li:nth-last-of-type(1) {
+  grid-row: 4/5;
+}
+.hero header .menu .mobile__menu .menu__mobile--list li:nth-last-of-type(2) {
+  grid-row: 5/6;
+}
+.hero header .menu .mobile__menu .menu__mobile--list li:nth-last-of-type(3) {
+  grid-row: 6/7;
+}
+.hero header .menu .mobile__menu .menu__mobile--social {
+  grid-row: 2/2;
+  align-self: flex-end;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.hero header .menu .mobile__menu .menu__mobile--social .social__item {
+  list-style: none;
+}
+.hero header .menu .mobile__menu .menu__mobile--social img {
+  width: 40px;
+}
+.hero header .btn__burger {
+  background-color: inherit;
+  border: none;
+  padding-inline: 10px;
+  padding-block: 20px;
+  position: relative;
+  z-index: 5;
+}
+.hero header .btn__burger span {
+  display: block;
+  background-color: #ead79c;
+  border-radius: 5px;
+  height: 4px;
+  width: 20px;
+  position: relative;
+}
+.hero header .btn__burger span::after, .hero header .btn__burger span::before {
+  background-color: #ead79c;
+  border-radius: 5px;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.hero header .btn__burger span::after {
+  top: 6px;
+}
+.hero header .btn__burger span::before {
+  bottom: 6px;
+}
+.hero header .btn__burger:hover {
+  cursor: pointer;
+}
+
+.title__name {
+  grid-row: 4/5;
+  font-size: 14px;
+  grid-column: 2/2;
+}
+
+.btn__chcekProfil {
+  grid-column: 2/2;
+  margin-left: 6px;
+  grid-row: 5/6;
+  border: none;
+  background-color: #191919;
+  box-shadow: #ead79c 0px 10px 20px -5px;
+  color: #ead79c;
+  font-size: 16px;
+  position: relative;
+  padding-inline: 10px;
+  z-index: 1;
+  max-width: 180px;
+  height: 50px;
+  margin-top: 15px;
+}
+.btn__chcekProfil::after, .btn__chcekProfil::before {
+  content: "";
+  position: absolute;
+  border: 1px solid #ead79c;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: transform 0.35s ease-in-out;
+  cursor: pointer;
+}
+.btn__chcekProfil::after {
+  top: 0;
+  left: 0;
+}
+.btn__chcekProfil::before {
+  top: 5px;
+  right: 5px;
+}
+.btn__chcekProfil:hover::after {
+  transform: translate(-7px, 5px);
+}
+.btn__chcekProfil:hover::before {
+  transform: translate(7px, -5px);
+}
+
+.container__img {
+  grid-column: 2/2;
+  grid-row: 7/11;
+  background-image: url(/img/raku.png);
+  background-repeat: no-repeat;
+  background-position: 41% 40%;
+  filter: grayscale(100%) drop-shadow(20px 20px 5px rgba(0, 0, 0, 0.5));
+}
+
+.icon__social {
+  grid-column: 2/2;
+  grid-row: 7/10;
+  list-style: none;
+  width: 20px;
+  aspect-ratio: 1/1;
+  align-self: flex-end;
+}
+.icon__social li:nth-of-type(2) {
+  margin-block: 10px;
+}
+.icon__social:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
